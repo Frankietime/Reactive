@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4E0A9AC-3533-464F-B220-05CB7E75A100}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Reactive</RootNamespace>
+    <AssemblyName>Reactive</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\AFGenerator.cs" />
+    <Compile Include="Classes\Slope.cs" />
+    <Compile Include="ConsoleInterface\ConsoleApp.cs" />
+    <Compile Include="ConsoleInterface\ConsoleProgram.cs" />
+    <Compile Include="Migrations\201501230247455_Initial.cs" />
+    <Compile Include="Migrations\201501230247455_Initial.Designer.cs">
+      <DependentUpon>201501230247455_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501230328165_Map.cs" />
+    <Compile Include="Migrations\201501230328165_Map.Designer.cs">
+      <DependentUpon>201501230328165_Map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501230329324_Instruments.cs" />
+    <Compile Include="Migrations\201501230329324_Instruments.Designer.cs">
+      <DependentUpon>201501230329324_Instruments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501230330559_Instruments2.cs" />
+    <Compile Include="Migrations\201501230330559_Instruments2.Designer.cs">
+      <DependentUpon>201501230330559_Instruments2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501230333407_Instrumentation.cs" />
+    <Compile Include="Migrations\201501230333407_Instrumentation.Designer.cs">
+      <DependentUpon>201501230333407_Instrumentation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501230341279_Instrumentation2.cs" />
+    <Compile Include="Migrations\201501230341279_Instrumentation2.Designer.cs">
+      <DependentUpon>201501230341279_Instrumentation2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501230350334_Notes.cs" />
+    <Compile Include="Migrations\201501230350334_Notes.Designer.cs">
+      <DependentUpon>201501230350334_Notes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501230354343_Instruments1.cs" />
+    <Compile Include="Migrations\201501230354343_Instruments1.Designer.cs">
+      <DependentUpon>201501230354343_Instruments1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501230425058_WorkInstrumentation.cs" />
+    <Compile Include="Migrations\201501230425058_WorkInstrumentation.Designer.cs">
+      <DependentUpon>201501230425058_WorkInstrumentation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\InputModels.cs" />
+    <Compile Include="Models\MappingModels.cs" />
+    <Compile Include="Models\ReactiveContext.cs" />
+    <Compile Include="Models\WorkModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201501230247455_Initial.resx">
+      <DependentUpon>201501230247455_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501230328165_Map.resx">
+      <DependentUpon>201501230328165_Map.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501230329324_Instruments.resx">
+      <DependentUpon>201501230329324_Instruments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501230330559_Instruments2.resx">
+      <DependentUpon>201501230330559_Instruments2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501230333407_Instrumentation.resx">
+      <DependentUpon>201501230333407_Instrumentation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501230341279_Instrumentation2.resx">
+      <DependentUpon>201501230341279_Instrumentation2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501230350334_Notes.resx">
+      <DependentUpon>201501230350334_Notes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501230354343_Instruments1.resx">
+      <DependentUpon>201501230354343_Instruments1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501230425058_WorkInstrumentation.resx">
+      <DependentUpon>201501230425058_WorkInstrumentation.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
